@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { connect } from 'react-redux';
-import { useState } from 'react';
 
 const StyledWrapper = styled.div`
     width: 250px;
@@ -22,19 +21,13 @@ const StyledWrapper = styled.div`
         }
     }
     .login {
-        background-color: rgba(0,0,0,0.5)
+        background-color: rgba(255,0,144,0.5)
     }
 `
 
 const Profile = props => {
 
     const { imageUrl, name, password, gmail } = props.profile;
-    const [login, setLogin] = useState('isLogin')
-
-    const Check = () => (
-        setLogin(props.isLogin)
-    )
-    
 
     if (props.isLogin == true) {
         return (
